@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
-<title>Bruno Luah | Cantor para eventos na Bahia</title>
-<meta name="description" content="Bruno Luah: voz e violão, show privado e banda completa para resorts, casamentos e eventos. Peça seu orçamento.">
+<title>Bruno Luah | Cantor para eventos, hotéis e casamentos na Bahia</title>
+<meta name="description" content="Bruno Luah, cantor para eventos, hotéis, resorts e casamentos no litoral da Bahia: voz e violão, show privado e banda completa. Peça seu orçamento.">
 <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27&gt;&lt;text y=%27.9em%27 font-size=%2790%27&gt;🌙&lt;/text&gt;&lt;/svg&gt;">
 <meta name="theme-color" content="#060605">
 <link rel="canonical" href="https://luahproducao.github.io/BrunoLuah/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Bruno Luah">
-<meta property="og:title" content="Bruno Luah | Cantor para eventos na Bahia">
-<meta property="og:description" content="Voz e violão, show privado e banda completa para casamentos, resorts e eventos. Peça seu orçamento.">
+<meta property="og:title" content="Bruno Luah | Cantor para eventos, hotéis e casamentos na Bahia">
+<meta property="og:description" content="Voz e violão, show privado e banda completa para hotéis, resorts, casamentos e eventos. Peça seu orçamento.">
 <meta property="og:url" content="https://luahproducao.github.io/BrunoLuah/">
 <meta property="og:image" content="https://luahproducao.github.io/BrunoLuah/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -174,7 +174,28 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
 .voz figure::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--foil)}
 .voz blockquote{margin:0;font:italic 400 1.45rem/1.45 "Cormorant Garamond",Georgia,serif;color:var(--white)}
 .voz figcaption{font-size:.8rem;letter-spacing:.16em;color:var(--gold)}
+.lang{display:inline-flex;gap:.1rem;border:1px solid rgba(212,169,74,.4)}
+.lang button{background:transparent;border:0;color:var(--gray);font:400 .78rem Jost,sans-serif;letter-spacing:.08em;padding:.3rem .5rem;cursor:pointer}
+.lang button.on{background:var(--gold);color:#111}
+.tipos{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin:2.4rem 0 0;padding:0}
+.tipos li{border:1px solid rgba(212,169,74,.45);padding:.45rem 1.1rem;font-size:.9rem;letter-spacing:.06em;color:var(--gold2)}
+.fmtbtn{margin-top:1.4rem;padding:.6rem 1.4rem;font-size:.82rem}
+.vtabs{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:inherit;margin:0 0 1.2rem}
+.vtab{background:transparent;color:var(--gray);border:1px solid var(--line);padding:.45rem 1rem;font:400 .85rem Jost,sans-serif;letter-spacing:.06em;cursor:pointer}
+.vtab.on{border-color:var(--gold);color:var(--gold2)}
+@media(max-width:819px){.vtabs{justify-content:center}}
+.hot{display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.hot>div{border-top:1px solid var(--gold);padding:1.4rem .4rem 0}
+.hot h3{font-size:1.1rem;margin-bottom:.6rem}
+.hot p{margin:0;color:var(--gray);font-size:1rem}
+.agl{max-width:44rem;margin:0 auto;display:grid;gap:.8rem}
+.agi{display:flex;gap:1.2rem;align-items:center;border:1px solid var(--line);padding:1rem 1.2rem;background:radial-gradient(120% 90% at 50% 0,#17130c 0,#080706 70%)}
+.agd{min-width:4.2rem;text-align:center;border-right:1px solid var(--gold);padding-right:1.2rem;font:500 1.6rem/1 Cinzel,serif;color:var(--gold2)}
+.agd small{display:block;font:400 .72rem Jost,sans-serif;letter-spacing:.14em;color:var(--gray);margin-top:.3rem}
+.agi strong{display:block;font:400 1.1rem Cinzel,serif}
+.agi span{color:var(--gray);font-size:.95rem}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"Bruno Luah","url":"https://luahproducao.github.io/BrunoLuah/","image":"https://luahproducao.github.io/BrunoLuah/og.jpg","description":"Cantor para eventos, hotéis, resorts e casamentos na Bahia. Voz e violão, show privado e banda completa.","genre":["MPB","Pop rock","Sertanejo","Axé","Pagode"],"areaServed":"Bahia, Brasil","telephone":"+55 71 99331-7850","sameAs":["https://www.instagram.com/brunoluah","https://www.instagram.com/brunoluahebanda","https://www.tiktok.com/@brunoluah","https://youtube.com/@brunoluah","https://open.spotify.com/artist/1yzqvnxEOAKyKeRdfeimuc"]}</script>
 </head>
 <body>
 <header class="top">
@@ -184,6 +205,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
       <a href="#formatos">Formatos</a>
       <a href="#aovivo">Ao vivo</a>
       <a href="#ouvir">Ouvir</a>
+      <span class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-l="pt">PT</button><button type="button" data-l="es">ES</button><button type="button" data-l="en">EN</button></span>
       <a class="btn" href="#orcamento">Orçamento</a>
     </nav>
   </div>
@@ -209,7 +231,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
         <h2>Uma presença que acolhe, emociona e celebra</h2>
         <div class="orn"><svg viewBox="0 0 24 24"><path d="M12 0c.6 7 4.9 11.4 12 12-7.100.6-11.400 5-12 12-.6-7-4.900-11.400-12-12C7.100 11.400 11.400 7 12 0z"/></svg></div>
         <p>Nascido em Imbassaí, na Bahia, Bruno Luah leva a energia da sua terra para cada palco. Cada apresentação é um encontro verdadeiro entre artista e público, em que a música cria laços e desperta memórias.</p>
-        <p>É o cantor de casas como o Costa do Sauípe e o Iberostar, com uma voz encantadora e um profissionalismo que chega antes dele. Em um ambiente intimista ou em um grande evento, o show é montado para o seu momento.</p>
+        <p>Já se apresentou em hotéis e resorts como o Costa do Sauípe, o Iberostar e o Grand Palladium Imbassaí, além de shows privados, casamentos e confraternizações, com uma voz encantadora e um profissionalismo que chega antes dele. Em um ambiente intimista ou em um grande evento, o show é montado para o seu momento.</p>
         <div class="sign" aria-hidden="true">Bruno Luah</div>
       </div>
       <figure><img id="aboutImg" alt="Bruno Luah cantando" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></figure>
@@ -228,16 +250,19 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
           <h3>Show Privado</h3>
           <p>Repertório variado, com músicas marcantes para tornar o seu evento uma experiência única.</p>
           <ul><li>MPB e pop rock</li><li>Sertanejo e seresta</li><li>Axé, pagode e arrocha</li></ul>
+          <a class="btn fmtbtn" href="#aovivo" onclick="window.verFormato&&verFormato('todos')">Assistir</a>
         </article>
         <article>
           <h3>Voz e Violão</h3>
           <p>Apresentação intimista e emocionante, perfeita para alegria e conexão, com a vibe de verão que só a Bahia tem.</p>
           <ul><li>Sarau ao pôr do sol</li><li>Jantares e casamentos</li><li>Hotéis e resorts</li></ul>
+          <a class="btn fmtbtn" href="#aovivo" onclick="window.verFormato&&verFormato('voz')">Assistir</a>
         </article>
         <article>
           <h3>Vibe de Bahia</h3>
           <p>Show completo, com muita dança e diversão. Do axé ao pagode, da música latina à alegria contagiante.</p>
           <ul><li>Voz, violão, guitarra e baixo</li><li>Bateria, percussão e teclado</li><li>Som e iluminação</li></ul>
+          <a class="btn fmtbtn" href="#aovivo" onclick="window.verFormato&&verFormato('banda')">Assistir</a>
         </article>
       </div>
     </div>
@@ -255,6 +280,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
           <div class="ctrl" id="dots"></div>
         </div>
         <div class="livetxt">
+          <div class="vtabs"><button type="button" class="vtab on" data-f="todos" onclick="window.verFormato&&verFormato('todos')">Todos</button><button type="button" class="vtab" data-f="voz" onclick="window.verFormato&&verFormato('voz')">Voz e Violão</button><button type="button" class="vtab" data-f="banda" onclick="window.verFormato&&verFormato('banda')">Banda completa</button></div>
           <p>Trechos de shows recentes, em ordem diferente a cada visita. Deslize para o lado para ver o próximo.</p>
           <div class="actions" style="justify-content:inherit"><button class="btn" id="next" type="button">Próximo vídeo</button><button class="btn" id="snd" type="button">Ativar som</button></div>
         </div>
@@ -272,7 +298,38 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
       <div class="venues">
         <div class="venue"><strong>Sarau ao pôr do sol</strong><span>Costa do Sauípe Resort</span></div>
         <div class="venue"><strong>Noite de Branco</strong><span>Iberostar Waves Bahia</span></div>
+        <div class="venue"><strong>Grand Palladium</strong><span>Imbassaí, Bahia</span></div>
+        <div class="venue"><strong>Outros hotéis e resorts</strong><span>Apresentações em diversos hotéis</span></div>
       </div>
+      <ul class="tipos"><li>Hotéis e resorts</li><li>Casamentos</li><li>Shows privados</li><li>Confraternizações</li></ul>
+    </div>
+  </section>
+
+  <section id="hoteis" class="live">
+    <div class="wrap">
+      <div class="head">
+        <h2>Para hotéis, resorts e produtoras</h2>
+        <div class="orn"><svg viewBox="0 0 24 24"><path d="M12 0c.6 7 4.9 11.4 12 12-7.100.6-11.400 5-12 12-.6-7-4.900-11.400-12-12C7.100 11.400 11.400 7 12 0z"/></svg></div>
+        <p class="lead">Experiência em noites temáticas e jantares ao pôr do sol, com o formato certo para cada ocasião.</p>
+      </div>
+      <div class="hot">
+        <div><h3>Um formato para cada noite</h3><p>Voz e Violão para jantares e sarau ao pôr do sol; banda completa para noites temáticas como a Noite de Branco.</p></div>
+        <div><h3>Repertório para o seu público</h3><p>MPB, pop rock, sertanejo, axé, pagode, arrocha e música latina, adaptado ao perfil dos hóspedes e do evento.</p></div>
+        <div><h3>Estrutura completa</h3><p>Banda completa com som e iluminação no formato Vibe de Bahia. A estrutura técnica é combinada na proposta, conforme o formato e o local.</p></div>
+        <div><h3>Contratação formal</h3><p>Atendimento pela Luah Produções e Eventos, com proposta por escrito.</p></div>
+      </div>
+      <div class="actions" style="margin-top:2.5rem"><a class="btn solid" href="#orcamento" onclick="window.pedirHotel&&pedirHotel()">Solicitar proposta para hotel</a><a class="btn" href="midia-kit-bruno-luah.pdf" download>Baixar mídia kit (PDF)</a></div>
+    </div>
+  </section>
+
+  <section id="agenda" hidden>
+    <div class="wrap">
+      <div class="head">
+        <h2>Agenda</h2>
+        <div class="orn"><svg viewBox="0 0 24 24"><path d="M12 0c.6 7 4.9 11.4 12 12-7.100.6-11.400 5-12 12-.6-7-4.900-11.400-12-12C7.100 11.400 11.400 7 12 0z"/></svg></div>
+        <p class="lead">Onde ver o Bruno ao vivo.</p>
+      </div>
+      <div class="agl" id="agl"></div>
     </div>
   </section>
 
@@ -319,6 +376,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
         <div class="orn"><svg viewBox="0 0 24 24"><path d="M12 0c.6 7 4.9 11.4 12 12-7.100.6-11.400 5-12 12-.6-7-4.900-11.400-12-12C7.100 11.400 11.400 7 12 0z"/></svg></div>
       </div>
       <div class="faq">
+        <details><summary>O Bruno atende hotéis e resorts?</summary><p>Sim. Já se apresentou no Costa do Sauípe, no Iberostar e no Grand Palladium Imbassaí, entre outros hotéis, e também faz casamentos, shows privados e confraternizações.</p></details>
         <details><summary>Quais formatos de show o Bruno oferece?</summary><p>Três formatos: Show Privado, com repertório variado; Voz e Violão, intimista e acolhedor; e Vibe de Bahia, com banda completa, som e iluminação, para muita dança e diversão.</p></details>
         <details><summary>Que estilos de música fazem parte do repertório?</summary><p>MPB, pop rock, sertanejo, seresta, axé, pagode e arrocha, entre outros. O repertório é adaptado ao estilo do seu evento.</p></details>
         <details><summary>O show pode ser adaptado ao meu evento?</summary><p>Sim. Cada apresentação é montada a partir da necessidade do cliente, seja um jantar intimista, um casamento, um hotel ou um grande evento.</p></details>
@@ -342,7 +400,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
         </div>
         <div class="row">
           <label>Tipo de evento
-            <select id="tipo" required><option value="">Selecione</option><option>Casamento</option><option>Aniversário</option><option>Evento corporativo</option><option>Hotel ou resort</option><option>Bar ou restaurante</option><option>Outro</option></select>
+            <select id="tipo" required><option value="">Selecione</option><option>Hotel ou resort</option><option>Casamento</option><option>Show privado</option><option>Confraternização</option><option>Aniversário</option><option>Evento corporativo</option><option>Bar ou restaurante</option><option>Outro</option></select>
           </label>
           <label>Formato de interesse
             <select id="formato"><option>Ainda não sei</option><option>Show Privado</option><option>Voz e Violão</option><option>Vibe de Bahia (banda completa)</option></select>
@@ -374,6 +432,9 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
         <p class="lead">Uso interno. Preencha os dados e gere o PDF.</p>
       </div>
       <form id="prop" novalidate>
+        <label>Colar o pedido do cliente<textarea id="p_cola" style="min-height:7rem" placeholder="Ex.: Faz um orçamento de 2 mil&#10;Data: 28/12/26&#10;Horário: 19:00&#10;Faremos um aniversário no condomínio Summer House Genipabu nessa data"></textarea></label>
+        <button type="button" class="btn" id="p_ler">Preencher campos pelo texto</button>
+        <p id="p_resumo" class="hint" style="min-height:1.2em"></p>
         <label>Cliente (opcional)<input id="p_cli" autocomplete="off"></label>
         <div class="row">
           <label>Formato
@@ -383,10 +444,13 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
         </div>
         <div class="row">
           <label>Data<input id="p_data" type="date"></label>
+          <label>Horário (opcional)<input id="p_hora" type="time"></label>
           <label>Valor (R$)<input id="p_val" inputmode="decimal" placeholder="3.500,00" autocomplete="off"></label>
         </div>
+        <label>Tipo de evento (opcional, aparece junto ao local)<input id="p_tipo" placeholder="Ex.: Aniversário" autocomplete="off"></label>
         <label>Descrição (uma linha por tópico)<textarea id="p_desc" style="min-height:9rem"></textarea></label>
         <label>Observações (opcional)<textarea id="p_obs" style="min-height:4.5rem"></textarea></label>
+        <label style="display:flex;align-items:center;gap:.7rem;color:var(--white);font-size:1rem"><input type="checkbox" id="p_fin" checked style="width:auto;height:auto"> Registrar no financeiro como orçamento em aberto</label>
         <div class="actions">
           <button type="button" class="btn solid" id="p_gerar">Gerar PDF</button>
           <button type="button" class="btn" id="p_fechar">Fechar</button>
@@ -438,7 +502,16 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
     pl.addEventListener("pointerdown",function(e){px=e.clientX;py=e.clientY;pt=Date.now()});
     pl.addEventListener("pointerup",function(e){var dx=e.clientX-px,dy=e.clientY-py;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.3&&Date.now()-pt<900){lastSwipe=Date.now();go(dx<0?1:-1)}});
     document.addEventListener("keydown",function(e){if(e.key==="ArrowRight")go(1);else if(e.key==="ArrowLeft")go(-1)});
-    (function(){var n=10;(function next(){if(n>80||location.protocol==="file:")return;var u="video"+n+".mp4";fetch(u,{method:"HEAD"}).then(function(r){if(!r.ok)return;ord.push(u);N=ord.length;var i=ord.length-1,d=document.createElement("button");d.className="dot";d.type="button";d.setAttribute("aria-label","Vídeo "+(i+1));d.onclick=function(){play(i)};dots.appendChild(d);n++;next()}).catch(function(){})})()})();
+    (function(){var n=10;(function next(){if(n>80||location.protocol==="file:")return;var u="video"+n+".mp4";fetch(u,{method:"HEAD"}).then(function(r){if(!r.ok)return;ord.push(u);base.push({u:u,f:"todos"});N=ord.length;var i=ord.length-1,d=document.createElement("button");d.className="dot";d.type="button";d.setAttribute("aria-label","Vídeo "+(i+1));d.onclick=function(){play(i)};dots.appendChild(d);n++;next()}).catch(function(){})})()})();
+    var VF=["banda","banda","banda","banda","voz","voz","voz","voz","banda"],base=VIDEOS.map(function(u,i){return {u:u,f:VF[i]||"todos"}});
+    window.verFormato=function(f){
+      var lista=shuffle(base.filter(function(x){return f==="todos"||x.f===f}).map(function(x){return x.u}));
+      if(!lista.length)return;
+      ord=lista;N=ord.length;dots.innerHTML="";
+      ord.forEach(function(_,i){var d=document.createElement("button");d.className="dot";d.type="button";d.setAttribute("aria-label","Vídeo "+(i+1));d.onclick=function(){play(i)};dots.appendChild(d)});
+      [].forEach.call(document.querySelectorAll(".vtab"),function(b){b.classList.toggle("on",b.getAttribute("data-f")===f)});
+      play(0);
+    };
     if("IntersectionObserver" in window){new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){if(!v.getAttribute("src"))play(0);else{var q=v.play();if(q&&q.catch)q.catch(function(){})}}else v.pause()})},{threshold:.25}).observe(pl)}else play(0);
   }
 
@@ -449,7 +522,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
     if($("local").value.trim())l.push("*Local:* "+$("local").value.trim());
     if($("conv").value)l.push("*Convidados:* "+$("conv").value);
     if($("msg").value.trim())l.push("","*Detalhes:* "+$("msg").value.trim());
-    l.push("","Fico no aguardo do retorno. Obrigado(a)!");return l.join("\n");
+    if(window.ORIGEM)l.push("*Origem:* "+window.ORIGEM);if(window.IDIOMA&&window.IDIOMA!=="pt")l.push("*Idioma do cliente:* "+window.IDIOMA.toUpperCase());l.push("","Fico no aguardo do retorno. Obrigado(a)!");return l.join("\n");
   }
   function ok(){
     var s=$("status");
@@ -511,11 +584,11 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
     if(d.cli){doc.setFontSize(11.5);doc.text("Cliente: "+d.cli,L,58)}
     doc.setFont("helvetica","bold");doc.setFontSize(24);doc.text("Orçamento Apresentação Musical",W/2,80,{align:"center"});
     doc.setFont("helvetica","italic");doc.setFontSize(22);doc.text(d.fmt,W/2,90,{align:"center"});
-    doc.setFontSize(19);doc.text(d.loc,W/2,108,{align:"center"});
+    doc.setFontSize(19);var locT=(d.tipo?d.tipo+" · ":"")+d.loc,ll=doc.splitTextToSize(locT,170),yy=108;ll.forEach(function(t){doc.text(t,W/2,yy,{align:"center"});yy+=9});yy+=1;
     doc.setFont("helvetica","bolditalic");doc.setFontSize(19);
-    var a="Data: ",wa=doc.getTextWidth(a),wd=doc.getTextWidth(d.data),x=(W-wa-wd)/2;
-    doc.text(a,x,118);doc.text(d.data,x+wa,118);doc.setLineWidth(0.4);doc.setDrawColor(20,20,20);doc.line(x+wa,119.2,x+wa+wd,119.2);
-    doc.setFont("helvetica","italic");doc.setFontSize(14.5);y=152;
+    var a="Data: ",hr=d.hora?" às "+fh(d.hora):"",wa=doc.getTextWidth(a),wd=doc.getTextWidth(d.data),we=doc.getTextWidth(hr),x=(W-wa-wd-we)/2;
+    doc.text(a,x,yy);doc.text(d.data,x+wa,yy);if(hr)doc.text(hr,x+wa+wd,yy);doc.setLineWidth(0.4);doc.setDrawColor(20,20,20);doc.line(x+wa,yy+1.2,x+wa+wd,yy+1.2);
+    doc.setFont("helvetica","italic");doc.setFontSize(14.5);y=yy+34;
     d.linhas.forEach(function(t){var w=doc.splitTextToSize(t,162);doc.text("•",L,y);doc.text(w,L+6,y);y+=w.length*6.6+3.5});
     doc.setFont("helvetica","bold");doc.setFontSize(16);doc.text("Valor: R$ "+d.val,L+4,240);
     if(d.obs){doc.setFont("helvetica","italic");doc.setFontSize(11.5);doc.text(doc.splitTextToSize(d.obs,172),L+4,252)}
@@ -534,8 +607,115 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
     return "ok";
   }
 
+  /* ===== colar pedido ===== */
+  function sem(s){return s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase()}
+  function p2(n){return (n<10?"0":"")+n}
+  var NUMW={"um":1,"uma":1,"dois":2,"duas":2,"tres":3,"quatro":4,"cinco":5,"seis":6,"sete":7,"oito":8,"nove":9,"dez":10};
+  function numBR(s){s=String(s).replace(/\s/g,"");if(s.indexOf(",")>-1)s=s.replace(/\./g,"").replace(",",".");else if(/^\d{1,3}(\.\d{3})+$/.test(s))s=s.replace(/\./g,"");var n=parseFloat(s);return isNaN(n)?null:n}
+  function tit(s){var peq={"de":1,"da":1,"do":1,"das":1,"dos":1,"e":1};return s.split(/\s+/).map(function(w,i){if(!w)return w;if(i>0&&peq[w.toLowerCase()])return w.toLowerCase();if(w.length<=4&&w===w.toUpperCase()&&/[A-Z]/.test(w))return w;return w.charAt(0).toUpperCase()+w.slice(1).toLowerCase()}).join(" ")}
+  function fh(h){var m=/^(\d{1,2}):(\d{2})/.exec(h||"");if(!m)return "";var hh=parseInt(m[1],10);return m[2]==="00"?hh+"h":hh+"h"+m[2]}
+  function isoData(d,mo,y){d=+d;mo=+mo;if(mo<1||mo>12||d<1||d>31)return null;var now=new Date(),cy=now.getFullYear();
+    if(y===undefined||y===""||y===null){y=cy;var t=new Date(y,mo-1,d);var h=new Date(cy,now.getMonth(),now.getDate());if(t<h)y=cy+1}
+    else{y=+y;if(y<100)y+=2000}
+    var c=new Date(y,mo-1,d);if(c.getMonth()!==mo-1)return null;return y+"-"+p2(mo)+"-"+p2(d)}
+  var MESES=["janeiro","fevereiro","marco","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+  function acha(t){
+    var r={},tx=t.replace(/\r/g,""),sx=sem(tx),m;
+    /* valor */
+    var vm=null;
+    if((m=/r\$\s*([\d.]+(?:,\d{1,2})?)(?:\s*(mil|k)\b)?/i.exec(tx))){var n=numBR(m[1]);if(n!==null){if(m[2])n*=1000;vm=n}}
+    if(vm===null&&(m=/(\d+(?:[.,]\d+)?)\s*(?:mil|k)\b(?:\s*e\s*(\d{2,3})\b)?/i.exec(tx))){var n2=numBR(m[1]);if(n2!==null){n2*=1000;if(m[2])n2+=parseInt(m[2],10);vm=n2}}
+    if(vm===null&&(m=/\b(um|uma|dois|duas|tres|quatro|cinco|seis|sete|oito|nove|dez)\s+mil(?:\s+e\s+(\d{2,3}))?\b/.exec(sx))){vm=NUMW[m[1]]*1000+(m[2]?parseInt(m[2],10):0)}
+    if(vm!==null&&vm%1000===0&&(m=/\bmil\s+e\s+(cem|duzentos|trezentos|quatrocentos|quinhentos|seiscentos|setecentos|oitocentos|novecentos)\b/.exec(sx)))vm+={cem:100,duzentos:200,trezentos:300,quatrocentos:400,quinhentos:500,seiscentos:600,setecentos:700,oitocentos:800,novecentos:900}[m[1]];
+    if(vm===null&&(m=/(?:orcamento|valor|cache|investimento|por|de)\s*(?:de|do|e|:)?\s*(\d{1,3}(?:\.\d{3})+(?:,\d{2})?|\d{3,6}(?:,\d{2})?)(?![\d\/:.-]|\s*(?:h\b|horas|\/))/.exec(sx))){var n3=numBR(m[1]);if(n3!==null&&n3>=100)vm=n3}
+    if(vm!==null)r.val=vm;
+    /* data */
+    var dm=null,re=/(?:^|[^\d])(\d{1,2})([\/\-.])(\d{1,2})(?:\2(\d{2,4}))?(?![\d:])/g,mm;
+    while((mm=re.exec(tx))){var iso=isoData(mm[1],mm[3],mm[4]);if(iso){dm=iso;break}}
+    if(!dm&&(m=new RegExp("\\b(\\d{1,2})\\s*(?:de\\s+)?("+MESES.join("|")+")(?:\\s+de\\s+(\\d{4}))?","").exec(sx))){dm=isoData(m[1],MESES.indexOf(m[2])+1,m[3])}
+    if(dm)r.data=dm;
+    /* hora */
+    if((m=/\b(\d{1,2})\s*(?::|h)\s*(\d{2})?\b(?:\s*(?:h|hs|horas))?/i.exec(tx.replace(/\d{1,2}[\/\-.]\d{1,2}[\/\-.]\d{2,4}/g," ")))){
+      var hh=+m[1],mi=m[2]?+m[2]:0;
+      if(hh<24&&mi<60&&(/[:h]/i.test(m[0])))r.hora=p2(hh)+":"+p2(mi)}
+    if(!r.hora&&(m=/\b(?:as|às)\s+(\d{1,2})(?:\s*horas?)?\b/i.exec(tx))){var h3=+m[1];if(h3<24)r.hora=p2(h3)+":00"}
+    /* local */
+    var lm=null;
+    if((m=/^\s*(?:local|lugar|endere[cç]o)\s*[:\-]\s*(.+)$/im.exec(tx)))lm=m[1].trim();
+    if(!lm){var kw="condom[ií]nio|hotel|resort|pousada|casa|s[ií]tio|fazenda|clube|restaurante|bar|espa[cç]o|buffet|igreja|praia|sal[aã]o|quadra|arena|vila|villa|chal[eé]|barraca|quiosque|orla";
+      var rl=new RegExp("\\b(?:no|na|em|num|numa|nos|nas)\\s+((?:"+kw+")\\b.*)","i");
+      if((m=rl.exec(tx))){var x=m[1].split("\n")[0];
+        x=x.split(/[,;]/)[0];x=x.replace(/\s+(nessa|nesse|neste|nesta|na\s+data|no\s+dia|dia|[aà]s|para|com|que|onde|e\s+queremos|e\s+gostar[ií]amos|quando|durante|pra)\b.*$/i,"");
+        lm=x.replace(/[.,;:!\s]+$/,"")}}
+    if(!lm&&(m=new RegExp("^\\s*((?:"+kw+")\\b.*)$","im").exec(tx)))lm=m[1].split(/[,;]/)[0];
+    if(!lm&&(m=/\b(?:no|na|em)\s+([A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+(?:\s+(?:de|da|do|dos|das)?\s*[A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÀ-ÿ]+)*)/.exec(tx))){lm=m[1]}
+    if(lm){lm=lm.replace(/[.,;:!\s]+$/,"");if(lm)r.loc=tit(lm)}
+    /* tipo */
+    var TP=[["aniversario","Aniversário"],["casamento","Casamento"],["noivado","Noivado"],["confraternizacao","Confraternização"],["formatura","Formatura"],["corporativo","Evento Corporativo"],["batizado","Batizado"],["happy hour","Happy Hour"],["show privado","Show Privado"]];
+    for(var i=0;i<TP.length;i++){if(sx.indexOf(TP[i][0])>-1){r.tipo=TP[i][1];break}}
+    /* formato */
+    if(/viol[aã]o|voz e viol/i.test(tx)||/violao/.test(sx))r.fmt="Bruno Luah (Voz e Violão)";
+    else if(/\bbanda\b/.test(sx))r.fmt="Bruno Luah & Banda";
+    /* cliente / obs */
+    if((m=/^\s*(?:cliente|nome|contratante)\s*[:\-]\s*(.+)$/im.exec(tx)))r.cli=m[1].trim();
+    if((m=/^\s*(?:obs|observa[cç][aã]o|observa[cç][oõ]es)\s*[:\-]\s*(.+)$/im.exec(tx)))r.obs=m[1].trim();
+    return r}
+  window.acharPedido=acha;
+  function lerTexto(){
+    var t=g("p_cola").value;if(!t.trim()){g("p_resumo").textContent="";return}
+    var r=acha(t);
+    ["p_cli","p_loc","p_data","p_hora","p_val","p_tipo","p_obs"].forEach(function(i){g(i).value=""});
+    if(r.fmt)g("p_fmt").value=r.fmt;
+    preencher();
+    if(r.cli)g("p_cli").value=r.cli;
+    if(r.loc)g("p_loc").value=r.loc;
+    if(r.data)g("p_data").value=r.data;
+    if(r.hora)g("p_hora").value=r.hora;
+    if(r.val!==undefined)g("p_val").value=r.val.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
+    if(r.tipo)g("p_tipo").value=r.tipo;
+    if(r.obs)g("p_obs").value=r.obs;
+    var ok=[],falta=[];
+    r.val!==undefined?ok.push("valor R$ "+g("p_val").value):falta.push("valor");
+    if(r.data){var q=r.data.split("-");ok.push("data "+q[2]+"/"+q[1]+"/"+q[0])}else falta.push("data");
+    if(r.hora)ok.push("horário "+fh(r.hora));
+    r.loc?ok.push("local "+r.loc):falta.push("local");
+    if(r.tipo)ok.push("evento "+r.tipo);
+    ok.push("formato "+g("p_fmt").value);
+    var el=g("p_resumo");
+    el.style.color=falta.length?"#e08a8a":"";
+    el.textContent="Entendi: "+ok.join(" · ")+"."+(falta.length?" Não encontrei: "+falta.join(", ")+" — preencha manualmente.":" Confira os campos e toque em Gerar PDF.")}
+  g("p_ler").addEventListener("click",lerTexto);
+  g("p_cola").addEventListener("paste",function(){setTimeout(lerTexto,60)});
+
+  async function enviarFin(d){
+    var key=(localStorage.getItem("luah_jb_key")||"").trim(),bin=(localStorage.getItem("luah_jb_bin")||"").trim();
+    if(!key||!bin)return "Não registrado no financeiro: abra o app financeiro neste aparelho e entre uma vez para liberar o envio.";
+    var primeiro=localStorage.getItem("luah_jb_auth")==="access"?"access":"master";
+    var modos=[primeiro,primeiro==="master"?"access":"master"];
+    var base="https://api.jsonbin.io/v3/b/"+bin;
+    try{
+      var rec=null,hdr=null;
+      for(var i=0;i<modos.length&&!rec;i++){
+        var h={};h[modos[i]==="access"?"X-Access-Key":"X-Master-Key"]=key;
+        var r=await fetch(base+"/latest",{headers:h});
+        if(r.ok){var j=await r.json();rec=j.record;hdr=h}
+        else if(r.status!==401&&r.status!==403)break;
+      }
+      if(!rec||typeof rec!=="object"||(!rec.shows&&!rec.fin&&!rec.equipe))return "Não foi possível ler o financeiro com segurança. O orçamento não foi registrado.";
+      var id="orc"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+      var valor=Number(d.val.split(".").join("").replace(",","."))||0;
+      rec.orcamentos=rec.orcamentos||{};
+      rec.orcamentos[id]={id:id,cliente:d.cli||"",local:d.loc,dataEvento:d.dataIso,hora:d.hora||"",tipoEvento:d.tipo||"",formato:d.fmt,descricao:d.linhas,valor:valor,obs:d.obs||"",status:"aberto",criadoEm:new Date().toISOString().slice(0,10),origem:"site"};
+      var h2={"Content-Type":"application/json","X-Bin-Versioning":"false"};
+      Object.keys(hdr).forEach(function(k){h2[k]=hdr[k]});
+      var w=await fetch(base,{method:"PUT",headers:h2,body:JSON.stringify(rec)});
+      if(!w.ok)return "Não foi possível gravar no financeiro (erro "+w.status+"). O PDF foi gerado normalmente.";
+      return "Orçamento registrado no financeiro como Em aberto.";
+    }catch(e){return "Sem conexão com o financeiro. O PDF foi gerado normalmente."}
+  }
+
   g("p_gerar").addEventListener("click",function(){
-    var d={cli:g("p_cli").value.trim(),fmt:g("p_fmt").value,loc:g("p_loc").value.trim(),dataIso:g("p_data").value,val:valor(g("p_val").value),obs:g("p_obs").value.trim(),
+    var d={cli:g("p_cli").value.trim(),fmt:g("p_fmt").value,loc:g("p_loc").value.trim(),dataIso:g("p_data").value,hora:g("p_hora").value,tipo:g("p_tipo").value.trim(),val:valor(g("p_val").value),obs:g("p_obs").value.trim(),
       linhas:g("p_desc").value.split("\n").map(function(s){return s.trim()}).filter(Boolean)};
     if(!d.loc||!d.dataIso||!d.val||!d.linhas.length){st("Preencha local, data, valor e ao menos um tópico da descrição.",true);return}
     d.data=dataExt(d.dataIso);
@@ -545,12 +725,108 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
       try{doc=montar(J,d)}catch(e){st("Erro ao montar o PDF. Tente novamente.",true);return}
       var nome="Orcamento-Bruno-Luah-"+limpa(d.loc)+"-"+d.dataIso+".pdf";
       salvar(doc,nome).then(function(r){
-        st(r==="ok"?"PDF pronto: "+nome:r==="cancelado"?"Download cancelado.":"Não foi possível salvar o PDF aqui.",r==="erro")
+        var msg=r==="ok"?"PDF pronto: "+nome+".":r==="cancelado"?"Download cancelado.":"Não foi possível salvar o PDF aqui.";
+        if(g("p_fin").checked&&r!=="erro"){
+          st(msg+" Registrando no financeiro…");
+          enviarFin(d).then(function(m){st(msg+" "+m)});
+        }else st(msg,r==="erro");
       });
     });
   });
 })();
 </script>
 
+<script>
+(function(){
+  /* ── Analytics opcional (GoatCounter): preencha o código da sua conta, ex.: "brunoluah" ── */
+  var GC_CODE="";
+  /* ── Origem do visitante: ?o=ig | tt | yt | sp | bit … ── */
+  var MAPA={ig:"Instagram",tt:"TikTok",yt:"YouTube",sp:"Spotify",wa:"WhatsApp",bit:"Bitly",bio:"Link da bio",site:"Site"};
+  try{var o=(new URLSearchParams(location.search).get("o")||"").toLowerCase().replace(/[^a-z0-9_-]/g,"").slice(0,20);
+    if(o){localStorage.setItem("luah_origem",o)} else {o=localStorage.getItem("luah_origem")||""}
+    window.ORIGEM=o?(MAPA[o]||o):"";}catch(e){window.ORIGEM=""}
+  window.pedirHotel=function(){var t=document.getElementById("tipo");if(t){t.value="Hotel ou resort"}};
+
+  /* ── Idiomas PT / ES / EN ── */
+  var T={"Falar no WhatsApp":["Escribir por WhatsApp","Chat on WhatsApp"],"Vídeo anterior":["Video anterior","Previous video"],"Fotos de shows":["Fotos de shows","Show photos"],"Trecho de show do Bruno Luah":["Fragmento de un show de Bruno Luah","Clip from a Bruno Luah show"],"Principal":["Principal","Main"],"Formatos": ["Formatos", "Formats"], "Ao vivo": ["En vivo", "Live"], "Ouvir": ["Escuchar", "Listen"], "Orçamento": ["Presupuesto", "Quote"], "A música que transforma momentos em memórias.": ["La música que transforma momentos en recuerdos.", "Music that turns moments into memories."], "Pedir orçamento": ["Pedir presupuesto", "Request a quote"], "Ver ao vivo": ["Ver en vivo", "Watch live"], "Uma presença que acolhe, emociona e celebra": ["Una presencia que acoge, emociona y celebra", "A presence that welcomes, moves and celebrates"], "Nascido em Imbassaí, na Bahia, Bruno Luah leva a energia da sua terra para cada palco. Cada apresentação é um encontro verdadeiro entre artista e público, em que a música cria laços e desperta memórias.": ["Nacido en Imbassaí, en Bahía, Bruno Luah lleva la energía de su tierra a cada escenario. Cada presentación es un encuentro verdadero entre artista y público, donde la música crea lazos y despierta recuerdos.", "Born in Imbassaí, Bahia, Bruno Luah brings the energy of his homeland to every stage. Every show is a genuine encounter between artist and audience, where music builds bonds and awakens memories."], "Já se apresentou em hotéis e resorts como o Costa do Sauípe, o Iberostar e o Grand Palladium Imbassaí, além de shows privados, casamentos e confraternizações, com uma voz encantadora e um profissionalismo que chega antes dele. Em um ambiente intimista ou em um grande evento, o show é montado para o seu momento.": ["Ya se presentó en hoteles y resorts como Costa do Sauípe, Iberostar y Grand Palladium Imbassaí, además de shows privados, bodas y fiestas de confraternización, con una voz encantadora y un profesionalismo que llega antes que él. En un ambiente íntimo o en un gran evento, el show se arma para tu momento.", "He has performed at hotels and resorts such as Costa do Sauípe, Iberostar and Grand Palladium Imbassaí, as well as private shows, weddings and team celebrations, with an enchanting voice and a professionalism that precedes him. In an intimate setting or at a large event, the show is built for your moment."], "Três formatos, um show do seu jeito": ["Tres formatos, un show a tu manera", "Three formats, a show your way"], "Cada apresentação é montada a partir da necessidade do cliente.": ["Cada presentación se arma según la necesidad del cliente.", "Each performance is built around the client's needs."], "Show Privado": ["Show Privado", "Private Show"], "Repertório variado, com músicas marcantes para tornar o seu evento uma experiência única.": ["Repertorio variado, con canciones inolvidables para hacer de tu evento una experiencia única.", "A varied repertoire of memorable songs to make your event a unique experience."], "MPB e pop rock": ["MPB y pop rock", "MPB and pop rock"], "Sertanejo e seresta": ["Sertanejo y serenata", "Sertanejo and seresta"], "Axé, pagode e arrocha": ["Axé, pagode y arrocha", "Axé, pagode and arrocha"], "Voz e Violão": ["Voz y Guitarra", "Voice and Guitar"], "Apresentação intimista e emocionante, perfeita para alegria e conexão, com a vibe de verão que só a Bahia tem.": ["Presentación íntima y emocionante, perfecta para la alegría y la conexión, con el aire de verano que solo Bahía tiene.", "An intimate, moving performance, perfect for joy and connection, with the summer vibe only Bahia has."], "Sarau ao pôr do sol": ["Sarao al atardecer", "Sunset soirée"], "Jantares e casamentos": ["Cenas y bodas", "Dinners and weddings"], "Hotéis e resorts": ["Hoteles y resorts", "Hotels and resorts"], "Vibe de Bahia": ["Vibe de Bahía", "Bahia Vibe"], "Show completo, com muita dança e diversão. Do axé ao pagode, da música latina à alegria contagiante.": ["Show completo, con mucho baile y diversión. Del axé al pagode, de la música latina a la alegría contagiosa.", "A full show with plenty of dancing and fun. From axé to pagode, from Latin music to contagious joy."], "Voz, violão, guitarra e baixo": ["Voz, guitarra acústica, guitarra eléctrica y bajo", "Vocals, acoustic guitar, electric guitar and bass"], "Bateria, percussão e teclado": ["Batería, percusión y teclado", "Drums, percussion and keyboard"], "Som e iluminação": ["Sonido e iluminación", "Sound and lighting"], "Assistir": ["Ver", "Watch"], "Ao vivo, do palco para você": ["En vivo, del escenario para ti", "Live, from the stage to you"], "Todos": ["Todos", "All"], "Banda completa": ["Banda completa", "Full band"], "Trechos de shows recentes, em ordem diferente a cada visita. Deslize para o lado para ver o próximo.": ["Fragmentos de shows recientes, en un orden distinto en cada visita. Desliza hacia el lado para ver el siguiente.", "Clips from recent shows, in a different order each visit. Swipe sideways to see the next one."], "Próximo vídeo": ["Siguiente video", "Next video"], "Ativar som": ["Activar sonido", "Turn sound on"], "Silenciar": ["Silenciar", "Mute"], "Toque para ouvir": ["Toca para escuchar", "Tap to listen"], "Palcos que já receberam o Bruno": ["Escenarios que ya recibieron a Bruno", "Stages that have hosted Bruno"], "Noite de Branco": ["Noche Blanca", "White Night"], "Outros hotéis e resorts": ["Otros hoteles y resorts", "Other hotels and resorts"], "Apresentações em diversos hotéis": ["Presentaciones en diversos hoteles", "Shows at several hotels"], "Casamentos": ["Bodas", "Weddings"], "Shows privados": ["Shows privados", "Private shows"], "Confraternizações": ["Fiestas y confraternizaciones", "Team and year-end celebrations"], "Para hotéis, resorts e produtoras": ["Para hoteles, resorts y productoras", "For hotels, resorts and event producers"], "Experiência em noites temáticas e jantares ao pôr do sol, com o formato certo para cada ocasião.": ["Experiencia en noches temáticas y cenas al atardecer, con el formato adecuado para cada ocasión.", "Experience in themed nights and sunset dinners, with the right format for every occasion."], "Um formato para cada noite": ["Un formato para cada noche", "A format for every night"], "Voz e Violão para jantares e sarau ao pôr do sol; banda completa para noites temáticas como a Noite de Branco.": ["Voz y Guitarra para cenas y sarao al atardecer; banda completa para noches temáticas como la Noche Blanca.", "Voice and Guitar for dinners and sunset soirées; a full band for themed nights like the White Night."], "Repertório para o seu público": ["Repertorio para tu público", "Repertoire for your audience"], "MPB, pop rock, sertanejo, axé, pagode, arrocha e música latina, adaptado ao perfil dos hóspedes e do evento.": ["MPB, pop rock, sertanejo, axé, pagode, arrocha y música latina, adaptado al perfil de los huéspedes y del evento.", "MPB, pop rock, sertanejo, axé, pagode, arrocha and Latin music, tailored to your guests and your event."], "Estrutura completa": ["Estructura completa", "Complete setup"], "Banda completa com som e iluminação no formato Vibe de Bahia. A estrutura técnica é combinada na proposta, conforme o formato e o local.": ["Banda completa con sonido e iluminación en el formato Vibe de Bahía. La estructura técnica se acuerda en la propuesta, según el formato y el lugar.", "A full band with sound and lighting in the Bahia Vibe format. Technical setup is agreed in the proposal, according to format and venue."], "Contratação formal": ["Contratación formal", "Formal booking"], "Atendimento pela Luah Produções e Eventos, com proposta por escrito.": ["Atención de Luah Produções e Eventos, con propuesta por escrito.", "Handled by Luah Produções e Eventos, with a written proposal."], "Solicitar proposta para hotel": ["Solicitar propuesta para hotel", "Request a hotel proposal"], "Baixar mídia kit (PDF)": ["Descargar media kit (PDF)", "Download media kit (PDF)"], "Agenda": ["Agenda", "Schedule"], "Onde ver o Bruno ao vivo.": ["Dónde ver a Bruno en vivo.", "Where to see Bruno live."], "Quem viu, recomenda": ["Quien lo vio, lo recomienda", "Those who were there recommend him"], "Comentários reais de quem esteve nos shows ou acompanhou o Bruno nas redes.": ["Comentarios reales de quienes estuvieron en los shows o siguen a Bruno en las redes.", "Real comments from people who attended the shows or follow Bruno online."], "Comentário no TikTok": ["Comentario en TikTok", "Comment on TikTok"], "Comentário no Instagram, em espanhol": ["Comentario en Instagram", "Comment on Instagram, in Spanish"], "Ouça e acompanhe": ["Escucha y sigue", "Listen and follow"], "Músicas nas plataformas de streaming e bastidores dos shows nas redes.": ["Música en las plataformas de streaming y backstage de los shows en las redes.", "Music on streaming platforms and behind-the-scenes from the shows on social media."], "Instagram do Bruno": ["Instagram de Bruno", "Bruno's Instagram"], "Instagram da banda": ["Instagram de la banda", "Band's Instagram"], "Perguntas frequentes": ["Preguntas frecuentes", "Frequently asked questions"], "O Bruno atende hotéis e resorts?": ["¿Bruno trabaja con hoteles y resorts?", "Does Bruno perform at hotels and resorts?"], "Sim. Já se apresentou no Costa do Sauípe, no Iberostar e no Grand Palladium Imbassaí, entre outros hotéis, e também faz casamentos, shows privados e confraternizações.": ["Sí. Ya se presentó en Costa do Sauípe, Iberostar y Grand Palladium Imbassaí, entre otros hoteles, y también hace bodas, shows privados y confraternizaciones.", "Yes. He has performed at Costa do Sauípe, Iberostar and Grand Palladium Imbassaí, among other hotels, and also plays weddings, private shows and team celebrations."], "Quais formatos de show o Bruno oferece?": ["¿Qué formatos de show ofrece Bruno?", "What show formats does Bruno offer?"], "Três formatos: Show Privado, com repertório variado; Voz e Violão, intimista e acolhedor; e Vibe de Bahia, com banda completa, som e iluminação, para muita dança e diversão.": ["Tres formatos: Show Privado, con repertorio variado; Voz y Guitarra, íntimo y acogedor; y Vibe de Bahía, con banda completa, sonido e iluminación, para mucho baile y diversión.", "Three formats: Private Show, with a varied repertoire; Voice and Guitar, intimate and welcoming; and Bahia Vibe, with a full band, sound and lighting, for plenty of dancing and fun."], "Que estilos de música fazem parte do repertório?": ["¿Qué estilos musicales forman parte del repertorio?", "What music styles are in the repertoire?"], "MPB, pop rock, sertanejo, seresta, axé, pagode e arrocha, entre outros. O repertório é adaptado ao estilo do seu evento.": ["MPB, pop rock, sertanejo, seresta, axé, pagode y arrocha, entre otros. El repertorio se adapta al estilo de tu evento.", "MPB, pop rock, sertanejo, seresta, axé, pagode and arrocha, among others. The repertoire is adapted to the style of your event."], "O show pode ser adaptado ao meu evento?": ["¿El show puede adaptarse a mi evento?", "Can the show be adapted to my event?"], "Sim. Cada apresentação é montada a partir da necessidade do cliente, seja um jantar intimista, um casamento, um hotel ou um grande evento.": ["Sí. Cada presentación se arma según la necesidad del cliente, ya sea una cena íntima, una boda, un hotel o un gran evento.", "Yes. Each performance is built around the client's needs, whether an intimate dinner, a wedding, a hotel or a large event."], "Como peço um orçamento?": ["¿Cómo pido un presupuesto?", "How do I request a quote?"], "Preencha o formulário abaixo ou chame no WhatsApp (71) 99331-7850. A Luah Produções retorna com uma proposta personalizada para a sua data e o seu formato.": ["Completa el formulario de abajo o escribe por WhatsApp al (71) 99331-7850. Luah Produções responde con una propuesta personalizada para tu fecha y tu formato.", "Fill in the form below or message us on WhatsApp at (71) 99331-7850. Luah Produções will reply with a personalized proposal for your date and format."], "Transforme seu evento em uma experiência inesquecível": ["Convierte tu evento en una experiencia inolvidable", "Turn your event into an unforgettable experience"], "Cada evento é único, e a proposta também. Conte a data, o local e o clima da sua celebração: a Luah Produções monta o formato ideal, com repertório, estrutura e valores sob medida para você.": ["Cada evento es único, y la propuesta también. Cuéntanos la fecha, el lugar y el clima de tu celebración: Luah Produções arma el formato ideal, con repertorio, estructura y valores a tu medida.", "Every event is unique, and so is the proposal. Tell us the date, the venue and the mood of your celebration: Luah Produções builds the ideal format, with repertoire, setup and pricing tailored to you."], "Conte sobre o seu evento": ["Cuéntanos sobre tu evento", "Tell us about your event"], "Receba uma proposta personalizada": ["Recibe una propuesta personalizada", "Receive a personalized proposal"], "Garanta a sua data": ["Asegura tu fecha", "Secure your date"], "Seu nome": ["Tu nombre", "Your name"], "Seu WhatsApp": ["Tu WhatsApp", "Your WhatsApp"], "Tipo de evento": ["Tipo de evento", "Event type"], "Formato de interesse": ["Formato de interés", "Format of interest"], "Data do evento": ["Fecha del evento", "Event date"], "Cidade e local": ["Ciudad y lugar", "City and venue"], "Nº de convidados": ["N.º de invitados", "Number of guests"], "Detalhes (horário, estilo de música, estrutura do local)": ["Detalles (horario, estilo musical, estructura del lugar)", "Details (time, music style, venue setup)"], "Selecione": ["Selecciona", "Select"], "Hotel ou resort": ["Hotel o resort", "Hotel or resort"], "Casamento": ["Boda", "Wedding"], "Show privado": ["Show privado", "Private show"], "Confraternização": ["Confraternización", "Team or year-end celebration"], "Aniversário": ["Cumpleaños", "Birthday"], "Evento corporativo": ["Evento corporativo", "Corporate event"], "Bar ou restaurante": ["Bar o restaurante", "Bar or restaurant"], "Outro": ["Otro", "Other"], "Ainda não sei": ["Aún no lo sé", "Not sure yet"], "Vibe de Bahia (banda completa)": ["Vibe de Bahía (banda completa)", "Bahia Vibe (full band)"], "Enviar pelo WhatsApp": ["Enviar por WhatsApp", "Send via WhatsApp"], "Enviar por e-mail": ["Enviar por correo", "Send by email"], "Ao enviar, abrimos o seu WhatsApp ou e-mail com a mensagem pronta. Nada é guardado neste site.": ["Al enviar, abrimos tu WhatsApp o correo con el mensaje listo. Nada se guarda en este sitio.", "When you send, we open your WhatsApp or email with the message ready. Nothing is stored on this site."], "Preencha nome, WhatsApp e tipo de evento para enviar.": ["Completa nombre, WhatsApp y tipo de evento para enviar.", "Fill in name, WhatsApp and event type to send."], "Abrindo a mensagem pronta...": ["Abriendo el mensaje listo...", "Opening your message..."], "Ex.: Costa do Sauípe, BA": ["Ej.: Costa do Sauípe, BA", "E.g.: Costa do Sauípe, BA"], "Bruno Luah | Cantor para eventos, hotéis e casamentos na Bahia": ["Bruno Luah | Cantante para eventos, hoteles y bodas en Bahía", "Bruno Luah | Singer for events, hotels and weddings in Bahia"]};
+  var L="pt",orig=new WeakMap(),attrs=["placeholder","aria-label"];
+  function skip(n){var p=n.parentNode;return !p||(p.closest&&p.closest("#interno,script,style,noscript,.voz blockquote"))}
+  function tr(n){
+    var base=orig.has(n)?orig.get(n):n.nodeValue,key=base.trim(),e=T[key];
+    if(!e){return}
+    if(!orig.has(n)&&L!=="pt")orig.set(n,n.nodeValue);
+    var nv=L==="pt"?base:base.replace(key,e[L==="es"?0:1]);
+    if(n.nodeValue!==nv)n.nodeValue=nv;
+  }
+  function walk(root){var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),n,lista=[];while(n=w.nextNode()){if(n.nodeValue.trim()&&!skip(n))lista.push(n)}lista.forEach(tr)}
+  function atributos(){
+    attrs.forEach(function(a){[].forEach.call(document.querySelectorAll("["+a+"]"),function(el){
+      if(el.closest("#interno"))return;
+      var k="data-pt-"+a,pt=el.getAttribute(k)||el.getAttribute(a),e=T[pt];if(!e)return;
+      if(!el.getAttribute(k))el.setAttribute(k,pt);
+      el.setAttribute(a,L==="pt"?pt:e[L==="es"?0:1]);
+    })});
+  }
+  var obs=new MutationObserver(function(ms){
+    if(L==="pt")return;obs.disconnect();
+    ms.forEach(function(m){
+      m.addedNodes.forEach(function(a){if(a.nodeType===3){if(!skip(a))tr(a)}else if(a.nodeType===1)walk(a)});
+      if(m.type==="characterData"&&!skip(m.target))tr(m.target);
+    });
+    liga();
+  });
+  function liga(){obs.observe(document.body,{childList:true,subtree:true,characterData:true})}
+  function idioma(l){
+    L=l;window.IDIOMA=l;
+    try{localStorage.setItem("luah_lang",l)}catch(e){}
+    document.documentElement.lang=l==="pt"?"pt-BR":l;
+    obs.disconnect();
+    [].forEach.call(document.querySelectorAll("option"),function(op){if(!op.hasAttribute("value"))op.setAttribute("value",op.textContent.trim())});
+    walk(document.body);atributos();
+    var tt=T["Bruno Luah | Cantor para eventos, hotéis e casamentos na Bahia"];
+    document.title=l==="pt"?"Bruno Luah | Cantor para eventos, hotéis e casamentos na Bahia":tt[l==="es"?0:1];
+    [].forEach.call(document.querySelectorAll(".lang button"),function(b){b.classList.toggle("on",b.getAttribute("data-l")===l)});
+    liga();
+  }
+  [].forEach.call(document.querySelectorAll(".lang button"),function(b){b.addEventListener("click",function(){idioma(b.getAttribute("data-l"))})});
+  var ini="pt";
+  try{var q=new URLSearchParams(location.search).get("lang"),sv=localStorage.getItem("luah_lang"),nav=(navigator.language||"pt").slice(0,2).toLowerCase();
+    ini=(q==="es"||q==="en"||q==="pt")?q:(sv==="es"||sv==="en"||sv==="pt")?sv:(nav==="es"||nav==="en")?nav:"pt";}catch(e){}
+  [].forEach.call(document.querySelectorAll("option"),function(op){if(!op.hasAttribute("value"))op.setAttribute("value",op.textContent.trim())});
+  if(ini!=="pt")idioma(ini);else{[].forEach.call(document.querySelectorAll(".lang button"),function(b){b.classList.toggle("on",b.getAttribute("data-l")==="pt")});liga()}
+
+  /* ── Botão de WhatsApp com origem ── */
+  var fab=document.querySelector(".wafab");
+  if(fab&&window.ORIGEM){fab.href="https://wa.me/5571993317850?text="+encodeURIComponent("Olá! Vim pelo "+window.ORIGEM+" e gostaria de saber mais sobre os shows do Bruno Luah.")}
+
+  /* ── Agenda (agenda.json) ── */
+  var MESES=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"],SEM=["dom","seg","ter","qua","qui","sex","sáb"];
+  function esc(x){return String(x==null?"":x).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  if(location.protocol!=="file:"&&typeof fetch==="function"){
+    fetch("agenda.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():[]}).then(function(lista){
+      if(!Array.isArray(lista))return;
+      var hoje=new Date().toISOString().slice(0,10),fixos=lista.filter(function(x){return x&&x.semana}),unicos=lista.filter(function(x){return x&&x.data&&x.data>=hoje}).sort(function(a,b){return a.data.localeCompare(b.data)});
+      if(!fixos.length&&!unicos.length)return;
+      var h="";
+      fixos.forEach(function(x){h+='<div class="agi"><div class="agd">'+esc(String(x.semana).slice(0,3))+'<small>'+esc(x.hora||"")+'</small></div><div><strong>'+esc(x.titulo||"")+'</strong><span>'+esc(x.local||"")+(x.formato?" · "+esc(x.formato):"")+'</span></div></div>'});
+      unicos.forEach(function(x){var d=new Date(x.data+"T12:00");h+='<div class="agi"><div class="agd">'+d.getDate()+'<small>'+MESES[d.getMonth()]+' · '+SEM[d.getDay()]+'</small></div><div><strong>'+esc(x.titulo||"")+'</strong><span>'+esc(x.local||"")+(x.hora?" · "+esc(x.hora):"")+(x.formato?" · "+esc(x.formato):"")+'</span></div></div>'});
+      document.getElementById("agl").innerHTML=h;document.getElementById("agenda").hidden=false;
+      if(L!=="pt")idioma(L);
+    }).catch(function(){});
+  }
+
+  /* ── Contador de visitas e cliques (opcional) ── */
+  if(GC_CODE){
+    var s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";
+    s.setAttribute("data-goatcounter","https://"+GC_CODE+".goatcounter.com/count");document.head.appendChild(s);
+    document.addEventListener("click",function(e){
+      var a=e.target.closest&&e.target.closest("a,button");if(!a||!window.goatcounter||!window.goatcounter.count)return;
+      var h=a.getAttribute("href")||"",id=a.id||"",ev=null;
+      if(/wa\.me|whatsapp/.test(h)||id==="enviaWa")ev="clique-whatsapp";else if(/midia-kit/.test(h))ev="midia-kit";else if(id==="enviaMail")ev="orcamento-email";else if(/instagram/.test(h))ev="instagram";else if(/spotify/.test(h))ev="spotify";
+      if(ev)window.goatcounter.count({path:ev,title:ev,event:true});
+    });
+  }
+})();
+</script>
 </body>
 </html>
