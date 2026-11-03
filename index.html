@@ -449,6 +449,12 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
         </div>
         <label>Tipo de evento (opcional, aparece junto ao local)<input id="p_tipo" placeholder="Ex.: Aniversário" autocomplete="off"></label>
         <label>Descrição (uma linha por tópico)<textarea id="p_desc" style="min-height:9rem"></textarea></label>
+        <div class="row2" style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem">
+          <label>Duração do show (opcional)<input id="p_dur" placeholder="Ex.: 2 horas de show" autocomplete="off"></label>
+          <label>Sinal de reserva (%)<input id="p_sinal" inputmode="numeric" value="50" autocomplete="off"></label>
+          <label>Validade da proposta<input id="p_validade" value="7 dias" autocomplete="off"></label>
+          <label>Chave PIX (opcional)<input id="p_pix" placeholder="CNPJ, e-mail ou telefone" autocomplete="off"></label>
+        </div>
         <label>Observações (opcional)<textarea id="p_obs" style="min-height:4.5rem"></textarea></label>
         <label style="display:flex;align-items:center;gap:.7rem;color:var(--white);font-size:1rem"><input type="checkbox" id="p_fin" checked style="width:auto;height:auto"> Registrar no financeiro como orçamento em aberto</label>
         <div class="actions">
@@ -540,7 +546,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
 (function(){
   var g=function(i){return document.getElementById(i)};
   var PRE={
-    "Bruno Luah & Banda":["Show acústico com repertório variado, incluindo músicas contemporâneas e clássicos populares.","Apresentação adaptada ao estilo do evento, proporcionando um clima acolhedor e intimista."],
+    "Bruno Luah & Banda":["Show acústico com repertório variado, incluindo músicas contemporâneas e clássicos populares.","Apresentação adaptada ao estilo do evento, proporcionando um clima acolhedor e intimista.","Atendimento a pedidos de músicas e repertório combinado previamente com o cliente.","Experiência em hotéis e resorts como Costa do Sauípe, Iberostar e Grand Palladium Imbassaí, além de casamentos, shows privados e confraternizações."],
     "Bruno Luah (Voz e Violão)":["Apresentação intimista de voz e violão, com repertório variado de músicas contemporâneas e clássicos populares.","Apresentação adaptada ao estilo do evento, proporcionando um clima acolhedor e intimista."],
     "Bruno Luah (Show Privado)":["Show com repertório variado: MPB, pop rock, sertanejo, seresta, axé, pagode e arrocha.","Apresentação adaptada ao estilo do evento, para tornar o momento único."]
   };
@@ -554,7 +560,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
   g("p_fechar").addEventListener("click",function(){g("interno").hidden=true;window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})});
   function st(t,erro){var e=g("p_status");e.style.color=erro?"#ff8a80":"";e.textContent=t}
 
-  function dataExt(v){var m=["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],p=v.split("-");return parseInt(p[2],10)+" de "+m[parseInt(p[1],10)-1]+" de "+p[0]}
+  function dataExt(v){var m=["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],p=v.split("-");return parseInt(p[2],10)+" de "+m[parseInt(p[1],10)-1]+" de "+p[0]}
   function valor(v){var s=v.replace(/[^0-9,.]/g,"");if(s.indexOf(",")>-1)s=s.replace(/[.]/g,"").replace(",",".");else if(/^[0-9]{1,3}([.][0-9]{3})+$/.test(s))s=s.replace(/[.]/g,"");var n=parseFloat(s);return isNaN(n)?null:n.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})}
   function limpa(t){return t.normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^A-Za-z0-9]+/g,"-").replace(/^-|-$/g,"")}
 
@@ -567,31 +573,64 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
     document.head.appendChild(s);
   }
 
+  function numPdf(v){var s=String(v).replace(/\./g,"").replace(",",".");return parseFloat(s)||0}
+  function brl(n){return n.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})}
   function montar(J,d){
-    var doc=new J({unit:"mm",format:"a4"}),W=210,L=18,y;
-    try{
-      var img=document.querySelector("footer img").src;
-      doc.setGState(new doc.GState({opacity:0.12}));
-      doc.addImage(img,"PNG",W/2-58,108,116,Math.round(116*352/520));
-      doc.setGState(new doc.GState({opacity:1}));
-    }catch(e){}
-    doc.setTextColor(20,20,20);
-    doc.setFont("helvetica","normal");doc.setFontSize(32);doc.text("Bruno Luah",L,26);
-    doc.setFont("helvetica","bold");doc.setFontSize(19);doc.text("Luah Produções e Eventos",L,36);
-    doc.setFont("helvetica","normal");doc.setFontSize(11.5);
-    doc.text("Contato 71 99331-7850  E-mail: Jequitibar2@gmail.com",L,43);
-    doc.text("CNPJ: 50.918.489/0001-53",L,49);
-    if(d.cli){doc.setFontSize(11.5);doc.text("Cliente: "+d.cli,L,58)}
-    doc.setFont("helvetica","bold");doc.setFontSize(24);doc.text("Orçamento Apresentação Musical",W/2,80,{align:"center"});
-    doc.setFont("helvetica","italic");doc.setFontSize(22);doc.text(d.fmt,W/2,90,{align:"center"});
-    doc.setFontSize(19);var locT=(d.tipo?d.tipo+" · ":"")+d.loc,ll=doc.splitTextToSize(locT,170),yy=108;ll.forEach(function(t){doc.text(t,W/2,yy,{align:"center"});yy+=9});yy+=1;
-    doc.setFont("helvetica","bolditalic");doc.setFontSize(19);
-    var a="Data: ",hr=d.hora?" às "+fh(d.hora):"",wa=doc.getTextWidth(a),wd=doc.getTextWidth(d.data),we=doc.getTextWidth(hr),x=(W-wa-wd-we)/2;
-    doc.text(a,x,yy);doc.text(d.data,x+wa,yy);if(hr)doc.text(hr,x+wa+wd,yy);doc.setLineWidth(0.4);doc.setDrawColor(20,20,20);doc.line(x+wa,yy+1.2,x+wa+wd,yy+1.2);
-    doc.setFont("helvetica","italic");doc.setFontSize(14.5);y=yy+34;
-    d.linhas.forEach(function(t){var w=doc.splitTextToSize(t,162);doc.text("•",L,y);doc.text(w,L+6,y);y+=w.length*6.6+3.5});
-    doc.setFont("helvetica","bold");doc.setFontSize(16);doc.text("Valor: R$ "+d.val,L+4,240);
-    if(d.obs){doc.setFont("helvetica","italic");doc.setFontSize(11.5);doc.text(doc.splitTextToSize(d.obs,172),L+4,252)}
+    var doc=new J({unit:"mm",format:"a4"}),W=210,L=18,R=W-L,y,GOLD=[201,162,74],INK=[22,22,22],GRAY=[110,110,110];
+    var img=null;try{img=document.querySelector("footer img").src}catch(e){}
+    try{if(img){doc.setGState(new doc.GState({opacity:0.07}));doc.addImage(img,"PNG",W/2-58,120,116,Math.round(116*352/520));doc.setGState(new doc.GState({opacity:1}))}}catch(e){}
+    /* cabeçalho preto */
+    doc.setFillColor(12,12,12);doc.rect(0,0,W,46,"F");
+    doc.setFillColor(GOLD[0],GOLD[1],GOLD[2]);doc.rect(0,46,W,1,"F");
+    try{if(img)doc.addImage(img,"PNG",L-4,6,50,Math.round(50*352/520))}catch(e){doc.setTextColor(255,255,255);doc.setFont("helvetica","normal");doc.setFontSize(26);doc.text("Bruno Luah",L,26)}
+    doc.setTextColor(GOLD[0],GOLD[1],GOLD[2]);doc.setFont("helvetica","bold");doc.setFontSize(14);doc.text("Luah Produções e Eventos",R,17,{align:"right"});
+    doc.setTextColor(235,235,235);doc.setFont("helvetica","normal");doc.setFontSize(9.5);
+    doc.text("WhatsApp 71 99331-7850",R,25,{align:"right"});doc.text("Jequitibar2@gmail.com",R,30.5,{align:"right"});doc.text("CNPJ 50.918.489/0001-53",R,36,{align:"right"});
+    /* título */
+    doc.setTextColor(INK[0],INK[1],INK[2]);
+    y=62;
+    if(d.cli){doc.setFont("helvetica","normal");doc.setFontSize(10);doc.setTextColor(GRAY[0],GRAY[1],GRAY[2]);doc.text("Proposta para "+d.cli,W/2,y-6,{align:"center"});doc.setTextColor(INK[0],INK[1],INK[2])}
+    doc.setFont("helvetica","bold");doc.setFontSize(23);doc.text("Orçamento · Apresentação Musical",W/2,y+4,{align:"center"});
+    doc.setFont("helvetica","italic");doc.setFontSize(15);doc.setTextColor(GRAY[0],GRAY[1],GRAY[2]);doc.text(d.fmt,W/2,y+13,{align:"center"});
+    doc.setDrawColor(GOLD[0],GOLD[1],GOLD[2]);doc.setLineWidth(0.8);doc.line(W/2-18,y+19,W/2+18,y+19);
+    /* detalhes */
+    var c2=W/2+4;y=y+32;
+    function rot(t,x,yy){doc.setFont("helvetica","bold");doc.setFontSize(8.5);doc.setTextColor(GOLD[0],GOLD[1],GOLD[2]);doc.text(t,x,yy)}
+    rot("EVENTO",L,y);rot("DATA E HORÁRIO",c2,y);
+    doc.setTextColor(INK[0],INK[1],INK[2]);doc.setFont("helvetica","bold");doc.setFontSize(13.5);
+    doc.text(d.tipo||"Apresentação musical",L,y+7);
+    var dh=d.data+(d.hora?" · "+fh(d.hora):"");doc.text(doc.splitTextToSize(dh,R-c2),c2,y+7);
+    y+=19;rot("LOCAL",L,y);
+    doc.setTextColor(INK[0],INK[1],INK[2]);doc.setFont("helvetica","bold");doc.setFontSize(13.5);
+    var ll=doc.splitTextToSize(d.loc,R-L);doc.text(ll,L,y+7);y+=7+ll.length*6;
+    doc.setDrawColor(215,215,215);doc.setLineWidth(0.3);doc.line(L,y+3,R,y+3);y+=13;
+    /* incluso */
+    rot("O QUE ESTÁ INCLUSO",L,y);y+=8;
+    doc.setTextColor(INK[0],INK[1],INK[2]);doc.setFont("helvetica","normal");doc.setFontSize(12);
+    var itens=d.linhas.slice();if(d.dur)itens.unshift("Duração: "+d.dur+".");
+    itens.forEach(function(t){var w=doc.splitTextToSize(t,R-L-7);doc.setTextColor(GOLD[0],GOLD[1],GOLD[2]);doc.setFont("helvetica","bold");doc.text("•",L,y);doc.setTextColor(INK[0],INK[1],INK[2]);doc.setFont("helvetica","normal");doc.text(w,L+6,y);y+=w.length*5.8+3});
+    /* valor */
+    y+=4;var tot=numPdf(d.val),sinal=d.sinal?Math.round(tot*d.sinal)/100:0;
+    doc.setFillColor(12,12,12);doc.roundedRect(L,y,R-L,28,2,2,"F");
+    doc.setTextColor(GOLD[0],GOLD[1],GOLD[2]);doc.setFont("helvetica","bold");doc.setFontSize(9);doc.text("INVESTIMENTO",L+8,y+9);
+    doc.setTextColor(255,255,255);doc.setFontSize(25);doc.text("R$ "+d.val,L+8,y+21);
+    if(sinal){doc.setFont("helvetica","normal");doc.setFontSize(9.5);doc.setTextColor(225,225,225);
+      doc.text("Reserva da data com sinal de "+d.sinal+"%",R-8,y+12,{align:"right"});
+      doc.setFont("helvetica","bold");doc.setTextColor(GOLD[0],GOLD[1],GOLD[2]);doc.setFontSize(13);doc.text("R$ "+brl(sinal),R-8,y+20,{align:"right"})}
+    y+=37;
+    /* condições */
+    doc.setFont("helvetica","normal");doc.setFontSize(9.5);doc.setTextColor(GRAY[0],GRAY[1],GRAY[2]);
+    var cond=[];
+    if(sinal)cond.push("Pagamento: sinal de "+d.sinal+"% (R$ "+brl(sinal)+") para reservar a data e saldo de R$ "+brl(tot-sinal)+" até o dia do evento.");
+    if(d.pix)cond.push("Chave PIX: "+d.pix);
+    cond.push("Proposta válida por "+(d.validade||"7 dias")+". A data só fica reservada após a confirmação do sinal.");
+    if(d.obs)cond.push("Obs.: "+d.obs);
+    cond.forEach(function(t){var w=doc.splitTextToSize(t,R-L-5);doc.text("–",L,y);doc.text(w,L+5,y);y+=w.length*4.6+2});
+    /* rodapé */
+    doc.setFillColor(GOLD[0],GOLD[1],GOLD[2]);doc.rect(0,277,W,0.8,"F");
+    doc.setFillColor(12,12,12);doc.rect(0,277.8,W,19.2,"F");
+    doc.setTextColor(255,255,255);doc.setFont("helvetica","bold");doc.setFontSize(10);doc.text("Para reservar a data, responda esta mensagem.",W/2,285,{align:"center"});
+    doc.setFont("helvetica","normal");doc.setFontSize(8.5);doc.setTextColor(GOLD[0],GOLD[1],GOLD[2]);doc.text("Bruno Luah · Luah Produções e Eventos · 71 99331-7850 · Jequitibar2@gmail.com",W/2,291,{align:"center"});
     return doc;
   }
 
@@ -705,7 +744,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
       var id="orc"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
       var valor=Number(d.val.split(".").join("").replace(",","."))||0;
       rec.orcamentos=rec.orcamentos||{};
-      rec.orcamentos[id]={id:id,cliente:d.cli||"",local:d.loc,dataEvento:d.dataIso,hora:d.hora||"",tipoEvento:d.tipo||"",formato:d.fmt,descricao:d.linhas,valor:valor,obs:d.obs||"",status:"aberto",criadoEm:new Date().toISOString().slice(0,10),origem:"site"};
+      rec.orcamentos[id]={id:id,cliente:d.cli||"",local:d.locReal||"",dataEvento:d.dataIso,hora:d.hora||"",tipoEvento:d.tipo||"",formato:d.fmt,descricao:d.linhas,valor:valor,obs:d.obs||"",status:"aberto",criadoEm:new Date().toISOString().slice(0,10),origem:"site"};
       var h2={"Content-Type":"application/json","X-Bin-Versioning":"false"};
       Object.keys(hdr).forEach(function(k){h2[k]=hdr[k]});
       var w=await fetch(base,{method:"PUT",headers:h2,body:JSON.stringify(rec)});
@@ -715,15 +754,16 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
   }
 
   g("p_gerar").addEventListener("click",function(){
-    var d={cli:g("p_cli").value.trim(),fmt:g("p_fmt").value,loc:g("p_loc").value.trim(),dataIso:g("p_data").value,hora:g("p_hora").value,tipo:g("p_tipo").value.trim(),val:valor(g("p_val").value),obs:g("p_obs").value.trim(),
+    var d={cli:g("p_cli").value.trim(),fmt:g("p_fmt").value,loc:g("p_loc").value.trim(),dataIso:g("p_data").value,hora:g("p_hora").value,dur:g("p_dur").value.trim(),sinal:Math.min(100,Math.max(0,parseInt(g("p_sinal").value,10)||0)),validade:g("p_validade").value.trim(),pix:g("p_pix").value.trim(),tipo:g("p_tipo").value.trim(),val:valor(g("p_val").value),obs:g("p_obs").value.trim(),
       linhas:g("p_desc").value.split("\n").map(function(s){return s.trim()}).filter(Boolean)};
-    if(!d.loc||!d.dataIso||!d.val||!d.linhas.length){st("Preencha local, data, valor e ao menos um tópico da descrição.",true);return}
+    if(!d.dataIso||!d.val||!d.linhas.length){st("Preencha data, valor e ao menos um tópico da descrição.",true);return}
+    d.locReal=d.loc;if(!d.loc)d.loc="Local a definir";
     d.data=dataExt(d.dataIso);
     st("Gerando o PDF...");
     carregar(function(J){
       var doc;
       try{doc=montar(J,d)}catch(e){st("Erro ao montar o PDF. Tente novamente.",true);return}
-      var nome="Orcamento-Bruno-Luah-"+limpa(d.loc)+"-"+d.dataIso+".pdf";
+      var nome="Orcamento-Bruno-Luah-"+d.dataIso.split("-").reverse().join("-")+".pdf";
       salvar(doc,nome).then(function(r){
         var msg=r==="ok"?"PDF pronto: "+nome+".":r==="cancelado"?"Download cancelado.":"Não foi possível salvar o PDF aqui.";
         if(g("p_fin").checked&&r!=="erro"){
