@@ -459,6 +459,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
         <label style="display:flex;align-items:center;gap:.7rem;color:var(--white);font-size:1rem"><input type="checkbox" id="p_fin" checked style="width:auto;height:auto"> Registrar no financeiro como orçamento em aberto</label>
         <div class="actions">
           <button type="button" class="btn solid" id="p_gerar">Gerar PDF</button>
+          <button type="button" class="btn" id="p_zap">Enviar no WhatsApp</button>
           <button type="button" class="btn" id="p_fechar">Fechar</button>
         </div>
         <p id="p_status" role="status" aria-live="polite" style="min-height:1.4rem;text-align:center;color:var(--gold2);margin:0"></p>
@@ -753,7 +754,8 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
     }catch(e){return "Sem conexão com o financeiro. O PDF foi gerado normalmente."}
   }
 
-  g("p_gerar").addEventListener("click",function(){
+  var LEGENDA="Orçamento & Proposta - Bruno Luah";
+  function gerar(compartilhar){
     var d={cli:g("p_cli").value.trim(),fmt:g("p_fmt").value,loc:g("p_loc").value.trim(),dataIso:g("p_data").value,hora:g("p_hora").value,dur:g("p_dur").value.trim(),sinal:Math.min(100,Math.max(0,parseInt(g("p_sinal").value,10)||0)),validade:g("p_validade").value.trim(),pix:g("p_pix").value.trim(),tipo:g("p_tipo").value.trim(),val:valor(g("p_val").value),obs:g("p_obs").value.trim(),
       linhas:g("p_desc").value.split("\n").map(function(s){return s.trim()}).filter(Boolean)};
     if(!d.dataIso||!d.val||!d.linhas.length){st("Preencha data, valor e ao menos um tópico da descrição.",true);return}
@@ -762,8 +764,19 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
     st("Gerando o PDF...");
     carregar(function(J){
       var doc;
-      try{doc=montar(J,d)}catch(e){st("Erro ao montar o PDF. Tente novamente.",true);return}
+      try{doc=montar(J,d);doc.setProperties({title:LEGENDA,author:"Luah Produções e Eventos",subject:LEGENDA})}catch(e){st("Erro ao montar o PDF. Tente novamente.",true);return}
       var nome="Orcamento-Bruno-Luah-"+d.dataIso.split("-").reverse().join("-")+".pdf";
+      if(compartilhar){
+        var file=new File([doc.output("blob")],nome,{type:"application/pdf"});
+        if(navigator.canShare&&navigator.canShare({files:[file]})){
+          navigator.share({files:[file],title:LEGENDA,text:LEGENDA}).then(function(){
+            st("PDF enviado para compartilhamento. Se a legenda não aparecer, ela foi copiada: cole na conversa.");
+            if(g("p_fin").checked)enviarFin(d).then(function(m){st("Compartilhado. "+m)});
+          }).catch(function(e){st(e&&e.name==="AbortError"?"Compartilhamento cancelado.":"Não foi possível compartilhar aqui. Use Gerar PDF.",true)});
+          try{navigator.clipboard.writeText(LEGENDA).catch(function(){})}catch(e){}
+          return}
+        try{navigator.clipboard.writeText(LEGENDA).catch(function(){})}catch(e){}
+      }
       salvar(doc,nome).then(function(r){
         var msg=r==="ok"?"PDF pronto: "+nome+".":r==="cancelado"?"Download cancelado.":"Não foi possível salvar o PDF aqui.";
         if(g("p_fin").checked&&r!=="erro"){
@@ -772,7 +785,9 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
         }else st(msg,r==="erro");
       });
     });
-  });
+  }
+  g("p_gerar").addEventListener("click",function(){gerar(false)});
+  g("p_zap").addEventListener("click",function(){gerar(true)});
 })();
 </script>
 
