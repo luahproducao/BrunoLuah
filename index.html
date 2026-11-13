@@ -438,7 +438,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
         <label>Cliente (opcional)<input id="p_cli" autocomplete="off"></label>
         <div class="row">
           <label>Formato
-            <select id="p_fmt"><option>Bruno Luah &amp; Banda</option><option>Bruno Luah (Voz e Violão)</option><option>Bruno Luah (Show Privado)</option></select>
+            <select id="p_fmt"><option>Bruno Luah &amp; Banda</option><option>Bruno Luah (Voz e Violão)</option><option>Bruno Luah &amp; Power Trio</option><option>Bruno Luah (Show Privado)</option></select>
           </label>
           <label>Local<input id="p_loc" placeholder="Ex.: Costa do Sauípe" autocomplete="off"></label>
         </div>
@@ -549,6 +549,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
   var PRE={
     "Bruno Luah & Banda":["Show acústico com repertório variado, incluindo músicas contemporâneas e clássicos populares.","Apresentação adaptada ao estilo do evento, proporcionando um clima acolhedor e intimista.","Atendimento a pedidos de músicas e repertório combinado previamente com o cliente.","Experiência em hotéis e resorts como Costa do Sauípe, Iberostar e Grand Palladium Imbassaí, além de casamentos, shows privados e confraternizações."],
     "Bruno Luah (Voz e Violão)":["Apresentação intimista de voz e violão, com repertório variado de músicas contemporâneas e clássicos populares.","Apresentação adaptada ao estilo do evento, proporcionando um clima acolhedor e intimista."],
+    "Bruno Luah & Power Trio":["Show com formação de power trio: Bruno Luah e mais dois músicos, com repertório variado de músicas contemporâneas e clássicos populares.","Som encorpado e dinâmico em formação enxuta, adaptado ao estilo do evento e ao espaço disponível.","Atendimento a pedidos de músicas e repertório combinado previamente com o cliente.","Experiência em hotéis e resorts como Costa do Sauípe, Iberostar e Grand Palladium Imbassaí, além de casamentos, shows privados e confraternizações."],
     "Bruno Luah (Show Privado)":["Show com repertório variado: MPB, pop rock, sertanejo, seresta, axé, pagode e arrocha.","Apresentação adaptada ao estilo do evento, para tornar o momento único."]
   };
   var cliques=[];
@@ -695,6 +696,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
     for(var i=0;i<TP.length;i++){if(sx.indexOf(TP[i][0])>-1){r.tipo=TP[i][1];break}}
     /* formato */
     if(/viol[aã]o|voz e viol/i.test(tx)||/violao/.test(sx))r.fmt="Bruno Luah (Voz e Violão)";
+    else if(/\b(power\s*trio|trio)\b/.test(sx))r.fmt="Bruno Luah & Power Trio";
     else if(/\bbanda\b/.test(sx))r.fmt="Bruno Luah & Banda";
     /* cliente / obs */
     if((m=/^\s*(?:cliente|nome|contratante)\s*[:\-]\s*(.+)$/im.exec(tx)))r.cli=m[1].trim();
