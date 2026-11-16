@@ -1,0 +1,32 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pesquisa de satisfação | Bruno Luah</title><meta name="description" content="Conte como foi o seu evento com o Bruno Luah."><meta name="robots" content="noindex"><meta name="theme-color" content="#060605"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"><style>:root{--ink:#f6f1e6;--mut:#a8a296;--g:#d4a94a;--ln:#26221b;--hf:Cinzel,Georgia,serif;--qf:"Cormorant Garamond",Georgia,serif}body{margin:0;background:#060605;color:#f6f1e6;font-family:Jost,system-ui,sans-serif;font-weight:300}a{color:inherit}.bar{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;background:rgba(6,6,5,.88);backdrop-filter:blur(8px);border-bottom:1px solid #26221b;z-index:5}.bar a{text-decoration:none}.bar .logo{font-family:Cinzel,serif;letter-spacing:.14em;color:#d4a94a}.bar .o{font-size:.9rem;border:1px solid #d4a94a;color:#d4a94a;border-radius:999px;padding:.45rem 1rem}.pq-wrap{max-width:640px;margin:0 auto;padding:7.5rem 1.25rem 4rem}
+.pq-wrap h1{font-family:var(--hf);font-weight:400;font-size:clamp(1.9rem,6vw,2.6rem);color:var(--ink);margin:0 0 .6rem;line-height:1.15}
+.pq-wrap .lead{color:var(--mut);font-size:1.02rem;line-height:1.6;margin:0 0 2rem}
+.pq-wrap .kick{color:var(--g);letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;margin:0 0 .8rem}
+#pq{display:grid;gap:1.6rem}
+.q{display:grid;gap:.6rem;border:1px solid var(--ln);border-radius:14px;padding:1.1rem 1.1rem 1.2rem;margin:0;color:var(--ink);font-size:1rem;line-height:1.45}
+.q legend{padding:0 .3rem;float:left;width:100%;margin-bottom:.6rem}
+.q small{color:var(--mut)}
+.q input:not([type=radio]),.q textarea{width:100%;box-sizing:border-box;background:transparent;border:1px solid var(--ln);border-radius:10px;color:var(--ink);font:inherit;padding:.75rem .85rem}
+.q input:focus,.q textarea:focus{outline:none;border-color:var(--g)}
+.nps{display:grid;grid-template-columns:repeat(11,1fr);gap:.3rem}
+.nps label{position:relative}.nps input{position:absolute;opacity:0}
+.nps span{display:grid;place-items:center;height:2.6rem;border:1px solid var(--ln);border-radius:8px;cursor:pointer;font-size:.95rem}
+.nps input:checked+span{background:var(--g);color:#111;border-color:var(--g)}
+.nps input:focus-visible+span{outline:2px solid var(--g)}
+.npsl{display:flex;justify-content:space-between;color:var(--mut);font-size:.78rem}
+.stars{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:.25rem}
+.stars input{position:absolute;opacity:0}.stars label{font-size:2rem;color:var(--ln);cursor:pointer;line-height:1}
+.stars input:checked~label,.stars label:hover,.stars label:hover~label{color:var(--g)}
+.opts{display:grid;gap:.5rem}.opts label{display:flex;gap:.6rem;align-items:center;cursor:pointer}
+.opts input{accent-color:var(--g);width:1.1rem;height:1.1rem}
+.enviar{display:inline-block;justify-self:start;background:var(--g);color:#111;border:0;border-radius:999px;padding:.95rem 1.8rem;font:inherit;font-weight:500;letter-spacing:.04em;cursor:pointer;text-decoration:none;margin-top:.4rem}
+.enviar:disabled{opacity:.6}
+#box h2{font-family:var(--hf);font-weight:400;color:var(--ink);font-size:2rem;margin:0 0 .6rem}
+#box p{color:var(--mut);line-height:1.6;margin:0 0 1.6rem}
+.dep-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.1rem;margin-top:2rem}
+.dep{margin:0;border:1px solid var(--ln);border-radius:14px;padding:1.3rem 1.3rem 1.1rem;display:grid;gap:.8rem}
+.dep .st{color:var(--g);letter-spacing:.15em;font-size:.85rem}
+.dep blockquote{margin:0;color:var(--ink);font-family:var(--qf);font-size:1.18rem;line-height:1.45}
+.dep figcaption{color:var(--ink);font-size:.9rem}.dep figcaption span{color:var(--mut)}
+.dep-cta{margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;color:var(--mut)}
+</style></head><body><header class="bar"><a class="logo" href="./">BRUNO LUAH</a><a class="o" href="./#orcamento">Orçamento</a></header><main class="pq-wrap"><div id="box"><p class="kick">Pesquisa de satisfação</p><h1 id="hi">Olá!</h1><p class="lead">Foi uma alegria fazer parte do seu evento. São poucas perguntas e leva menos de 2 minutos.</p><form id="pq" novalidate></form></div></main><script>window.LUAH_ENDPOINT="";window.LUAH_SITE="bruno";window.LUAH_HOME="./";</script><script src="pesquisa.js"></script></body></html>

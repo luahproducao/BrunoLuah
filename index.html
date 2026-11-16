@@ -205,6 +205,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
       <a href="#formatos">Formatos</a>
       <a href="#aovivo">Ao vivo</a>
       <a href="#ouvir">Ouvir</a>
+      <a href="#redes">Redes</a>
       <span class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-l="pt">PT</button><button type="button" data-l="es">ES</button><button type="button" data-l="en">EN</button></span>
       <a class="btn" href="#orcamento">Orçamento</a>
     </nav>
@@ -333,6 +334,23 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
     </div>
   </section>
 
+  <section id="redes">
+    <style>#redes .rgrid{display:grid;gap:1.5rem;margin-top:2.5rem}#redes .yt{position:relative;aspect-ratio:16/9;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--coal)}#redes .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}#redes .igs{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}#redes h3{font-family:Cinzel,Georgia,serif;font-weight:400;color:var(--gold);letter-spacing:.08em;font-size:1rem;margin:0 0 .8rem}#redes .tk{display:flex;justify-content:center}#redes .sig{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:2rem}</style>
+    <div class="wrap">
+      <div class="head">
+        <h2>Nas redes</h2>
+        <div class="orn"><svg viewBox="0 0 24 24"><path d="M12 0c.6 7 4.9 11.4 12 12-7.100.6-11.400 5-12 12-.6-7-4.900-11.400-12-12C7.100 11.400 11.400 7 12 0z"/></svg></div>
+        <p class="lead">Vídeos dos shows no YouTube, no TikTok e no Instagram.</p>
+      </div>
+      <div class="rgrid" id="redesBox">
+        <div><h3>YouTube</h3><div class="yt" data-src="https://www.youtube-nocookie.com/embed/videoseries?list=UUYH9bb7bK8Squ1AvXylocyw"></div></div>
+        <div><h3>TikTok</h3><div class="tk"><blockquote class="tiktok-embed" cite="https://www.tiktok.com/@brunoluah" data-unique-id="brunoluah" data-embed-type="creator" style="max-width:780px;min-width:288px"><section><a target="_blank" rel="noopener" href="https://www.tiktok.com/@brunoluah">@brunoluah</a></section></blockquote></div></div>
+        <div><h3>Instagram</h3><div class="igs"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DfmvesbiEl8/" data-instgrm-version="14" style="margin:0 auto;max-width:400px;width:100%"><a href="https://www.instagram.com/reel/DfmvesbiEl8/" target="_blank" rel="noopener">Ver no Instagram</a></blockquote><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcpRtb2NURs/" data-instgrm-version="14" style="margin:0 auto;max-width:400px;width:100%"><a href="https://www.instagram.com/reel/DcpRtb2NURs/" target="_blank" rel="noopener">Ver no Instagram</a></blockquote><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DdUU_DVK5Jk/" data-instgrm-version="14" style="margin:0 auto;max-width:400px;width:100%"><a href="https://www.instagram.com/reel/DdUU_DVK5Jk/" target="_blank" rel="noopener">Ver no Instagram</a></blockquote></div></div>
+      </div>
+      <div class="sig"><a class="btn" href="https://www.youtube.com/channel/UCYH9bb7bK8Squ1AvXylocyw" target="_blank" rel="noopener">YouTube</a><a class="btn" href="https://www.tiktok.com/@brunoluah" target="_blank" rel="noopener">TikTok</a><a class="btn" href="https://www.instagram.com/brunoluah/" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+    <script>(function(){var b=document.getElementById('redesBox');if(!b)return;function go(){var y=b.querySelector('.yt');if(y&&!y.firstChild){var f=document.createElement('iframe');f.src=y.dataset.src;f.title='Vídeos do Bruno Luah no YouTube';f.loading='lazy';f.allow='accelerometer; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;y.appendChild(f);}[['https://www.tiktok.com/embed.js'],['https://www.instagram.com/embed.js']].forEach(function(u){var s=document.createElement('script');s.async=true;s.src=u[0];document.body.appendChild(s);});}if('IntersectionObserver' in window){var o=new IntersectionObserver(function(e){if(e[0].isIntersecting){o.disconnect();go();}},{rootMargin:'600px'});o.observe(b);}else go();})();</script>
+  </section>
   <section id="depoimentos">
     <div class="wrap">
       <div class="head">
@@ -348,6 +366,7 @@ header.top{background:rgba(6,6,5,.92);-webkit-backdrop-filter:blur(10px);backdro
         <figure><blockquote>&ldquo;Massa, por cantar em homenagem a nós baianas!&rdquo;</blockquote><figcaption>Comentário no TikTok</figcaption></figure>
         <figure><blockquote>&ldquo;Em fevereiro estou chegando aí, ansiosa!&rdquo;</blockquote><figcaption>Comentário no TikTok</figcaption></figure>
       </div>
+      <p style="text-align:center;margin-top:2rem"><a class="btn" href="depoimentos.html">Ver todos os depoimentos</a></p>
     </div>
   </section>
 
